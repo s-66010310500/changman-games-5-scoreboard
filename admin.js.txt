@@ -1,0 +1,30 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getDatabase, ref, onValue, update } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+const firebaseConfig = {
+  // 🔴 ใส่ firebaseConfig เหมือน script.js
+};
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+const scoreRef = ref(database, "score");
+
+let scoreA = 0;
+let scoreB = 0;
+
+onValue(scoreRef, (snapshot) => {
+  const data = snapshot.val();
+  scoreA = data.teamA;
+  scoreB = data.teamB;
+
+  document.getElementById("teamA").innerText = "ทีม A: " + scoreA;
+  document.getElementById("teamB").innerText = "ทีม B: " + scoreB;
+});
+
+window.addA = () => {
+  update(scoreRef, { teamA: scoreA + 1 });
+};
+
+window.addB = () => {
+  update(scoreRef, { teamB: scoreB + 1 });
+};

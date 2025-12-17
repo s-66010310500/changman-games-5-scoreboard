@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Live Score</title>
+</head>
+<body>
+  <h1>ผลการแข่งขันแบบเรียลไทม์</h1>
+
+  <h2 id="teamA">ทีม A: 0</h2>
+  <h2 id="teamB">ทีม B: 0</h2>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

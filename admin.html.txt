@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - CHANGMAN GAMES 5</title>
+</head>
+<body>
+  <h1>กรรมการบันทึกคะแนน</h1>
+
+  <h2 id="teamA">ทีม A: 0</h2>
+  <button onclick="addA()">+1 ทีม A</button>
+
+  <h2 id="teamB">ทีม B: 0</h2>
+  <button onclick="addB()">+1 ทีม B</button>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
